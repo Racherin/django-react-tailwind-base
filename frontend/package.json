@@ -30,6 +30,8 @@
     },
     "dependencies": {
         "@babel/plugin-proposal-class-properties": "^7.12.1",
+        "@headlessui/react": "^1.4.0",
+        "@heroicons/react": "^1.0.4",
         "react-router-dom": "^5.2.0"
     }
 }

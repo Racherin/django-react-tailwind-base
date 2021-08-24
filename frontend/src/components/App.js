@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-
+import AppBar from "./AppBar";
 export default class App extends Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    return <div className="text-center">Hello from React!</div>;
+    return <AppBar />;
   }
 }
 

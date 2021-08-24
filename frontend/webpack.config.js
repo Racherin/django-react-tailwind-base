@@ -9,28 +9,28 @@ module.exports = {
   },
   module: {
     rules: [
-        {
-          test: /\.js$/i,
-          include: path.resolve(__dirname, 'src'),
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env'],
-            },
+      {
+        test: /\.js$/i,
+        include: path.resolve(__dirname, "src"),
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
           },
         },
-        {
-          test: /\.css$/i,
-          include: path.resolve(__dirname, 'src'),
-          use: ['style-loader', 'css-loader', 'postcss-loader'],
-        },
-      ],
+      },
+      {
+        test: /\.css$/i,
+        include: path.resolve(__dirname, "src"),
+        use: ["style-loader", "css-loader", "postcss-loader"],
+      },
+    ],
   },
   optimization: {
     minimize: true,
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
+    contentBase: path.resolve(__dirname, "dist"),
     watchContentBase: true,
   },
   plugins: [
@@ -41,4 +41,8 @@ module.exports = {
       },
     }),
   ],
+  devServer: {
+    compress: true,
+    public: "racher.in",
+  },
 };
